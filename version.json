@@ -1,4 +1,4 @@
 {
-  "version": "1.0.0",
-  "notes": "Initial release — Sales, Inventory, Daily & Monthly Dashboards, Cloud Sync, Business Stats AI Analyst."
+  "version": "1.0.1",
+  "notes": "Restock history & reversal, void sale fixes, return processing from transaction history, inventory report accuracy improvements."
 }
