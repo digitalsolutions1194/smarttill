@@ -1,4 +1,4 @@
 {
-  "version": "1.0.1",
-  "notes": "Restock history & reversal, void sale fixes, return processing from transaction history, inventory report accuracy improvements."
+  "version": "1.0.2",
+  "notes": "Fixed shortage calculation and department name flexibility"
 }
