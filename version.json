@@ -1,4 +1,4 @@
 {
-  "version": "1.0.3",
-  "notes": "Fixed shortage calculation and department name flexibility"
+  "version": "1.0.4",
+  "notes": "Fixed shortage calculation, department name flexibility and Multi-store hub"
 }
