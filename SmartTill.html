@@ -2701,7 +2701,7 @@ hr.div{border:none;border-top:1px solid var(--border);margin:16px 0}
 // ═══════════════════════════════════════════════
 // VERSION & UPDATE CONFIG
 // ═══════════════════════════════════════════════
-const APP_VERSION = '1.0.22';
+const APP_VERSION = '1.0.23';
 
 // UPDATE_CHECK_URL: points to version.json on GitHub Pages
 const UPDATE_CHECK_URL = 'https://digitalsolutions1194.github.io/smarttill/version.json';
@@ -7925,9 +7925,14 @@ function getBranchTodayStats(data, selectedDate){
   const todaySess=sessions[t];
   let diff=0,diffType='balanced';
   if(todaySess&&todaySess.cashAvail!=null){
-    const raw=todaySess.cashAvail-netPos;
-    diff=parseFloat(Math.abs(raw).toFixed(2));
-    diffType=Math.abs(raw)<0.01?'balanced':raw<0?'shortage':'excess';
+    // If session was rectified, always show Balanced
+    if(todaySess.rectified){
+      diff=0; diffType='balanced';
+    } else {
+      const raw=todaySess.cashAvail-netPos;
+      diff=parseFloat(Math.abs(raw).toFixed(2));
+      diffType=Math.abs(raw)<0.01?'balanced':raw<0?'shortage':'excess';
+    }
   }
 
   const alerts=(data.products||[]).filter(p=>(p.stock||0)<=(p.alert||5)).length;
