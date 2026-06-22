@@ -1,4 +1,4 @@
 {
-  "version": "1.0.28",
-  "notes": "Fixed shortage calculation, department name flexibility, Multi-store hub upgrade, layby option and bug fixes"
+  "version": "1.0.33",
+  "notes": "This version introdeces the staff shift session and fixes receipts."
 }
